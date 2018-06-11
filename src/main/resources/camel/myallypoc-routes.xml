@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes id="routes1" xmlns="http://camel.apache.org/schema/spring">
+    <!--  <route id="_route1">
+        <from id="_from1" uri="direct:zipkinClient"/>
+        <removeHeader headerName="*" id="header1"/>
+        <to id="_to1" uri="{{zipkin_client_application}}/allypoc/echo/hello?bridgeEndpoint=true"/>
+    </route> -->
+    <route id="_route2">
+        <from id="_from2" uri="direct:hello"/>
+        <transform id="_transform1">
+            <constant>{{greeting_constant}} </constant>
+        </transform>
+        <log message="Service1 completed......" />
+    </route>
+</routes>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rests xmlns="http://camel.apache.org/schema/spring">
+    <rest id="rest1" path="/echo">
+        <get uri="/hello">
+            <to uri="direct:hello"/>
+        </get>
+        <!-- <get uri="/zipkinTest">
+            <to uri="direct:zipkinClient"/>
+        </get> -->
+    </rest>
+</rests>
